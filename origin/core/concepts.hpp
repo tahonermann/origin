@@ -74,8 +74,8 @@ concept bool
 Equality_comparable() {
   return requires (T a, T b)
   {
-    { a == b } -> Boolean;
-    { a != b } -> Boolean;
+    { a == b } -> bool;
+    { a != b } -> bool;
   };
 }
 
@@ -105,10 +105,10 @@ Weakly_ordered()
 {
   return requires (T a, T b)
   {
-    { a < b } -> Boolean;
-    { a > b } -> Boolean;
-    { a <= b } -> Boolean;
-    { a >= b } -> Boolean;
+    { a < b } -> bool;
+    { a > b } -> bool;
+    { a <= b } -> bool;
+    { a >= b } -> bool;
   };
 }
 
