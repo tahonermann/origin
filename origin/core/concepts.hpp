@@ -198,8 +198,7 @@ template<typename T>
 concept bool
 Destructible()
 {
-  // return std::is_destructible<T>::value;
-  return requires (T* t) { t->~T(); };
+  return std::is_destructible<T>::value;
 }
 
 // Is true if and only if an object of type T can be constructed with
