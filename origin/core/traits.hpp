@@ -303,11 +303,7 @@ template<typename T>
 concept bool
 Integral_type()
 {
-  return core::is_bool<T>()
-      || core::is_narrow_character<T>()
-      || core::is_wide_character<T>()
-      || core::is_signed_integer<T>()
-      || core::is_unsigned_integer<T>();
+  return std::is_integral<T>::value;
 }
 
 
